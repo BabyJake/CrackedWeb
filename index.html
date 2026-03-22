@@ -8,11 +8,8 @@
         :root {
             --bg-green: #3D7A5F;
             --btn-green: #6ECB9B;
-            --coin-gold: #C79F4F;
-            --egg-beige: #E0C9A6;
             --text-dark: #2A2A2A;
             --text-mid: #555;
-            --text-light: #888;
             --surface: #FFFFFF;
             --surface-alt: #F5F7F5;
             --radius: 16px;
@@ -28,7 +25,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── Hero ── */
         .hero {
             background: linear-gradient(160deg, #2D5E48 0%, var(--bg-green) 40%, var(--btn-green) 100%);
             color: white;
@@ -50,18 +46,6 @@
         }
 
         .hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
-
-        .hero-icon {
-            font-size: 72px;
-            margin-bottom: 16px;
-            display: inline-block;
-            animation: gentle-bounce 3s ease-in-out infinite;
-        }
-
-        @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
 
         .hero h1 {
             font-size: clamp(2.5rem, 5vw, 3.8rem);
@@ -98,7 +82,6 @@
             font-weight: 500;
         }
 
-        /* ── Section Layout ── */
         .section {
             max-width: 1080px;
             margin: 0 auto;
@@ -131,7 +114,6 @@
             margin: 0 auto 48px;
         }
 
-        /* ── How It Works ── */
         .steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -167,7 +149,6 @@
         .step h3 { font-size: 1.15rem; margin-bottom: 8px; }
         .step p { color: var(--text-mid); font-size: 0.95rem; }
 
-        /* ── Features Grid ── */
         .alt-bg { background: var(--surface-alt); }
 
         .features {
@@ -193,34 +174,6 @@
         .feature-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
         .feature-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.6; }
 
-        /* ── Privacy Section ── */
-        .privacy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .privacy-item {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            padding: 20px;
-            background: var(--surface-alt);
-            border-radius: 12px;
-        }
-
-        .privacy-item .icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .privacy-item h4 { font-size: 1rem; margin-bottom: 4px; }
-        .privacy-item p { color: var(--text-mid); font-size: 0.9rem; }
-
-        /* ── CTA ── */
         .cta {
             background: linear-gradient(160deg, #2D5E48 0%, var(--bg-green) 40%, var(--btn-green) 100%);
             color: white;
@@ -238,54 +191,9 @@
             font-size: 1.15rem;
             opacity: 0.92;
             max-width: 520px;
-            margin: 0 auto 32px;
+            margin: 0 auto;
         }
 
-        .cta-appstore {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            color: var(--text-dark);
-            padding: 14px 32px;
-            border-radius: 12px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .cta-appstore:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-        }
-
-        /* ── Footer ── */
-        .footer {
-            text-align: center;
-            padding: 48px 24px;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
-
-        .footer a {
-            color: var(--text-mid);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .footer a:hover { color: var(--bg-green); }
-
-        /* ── Responsive ── */
         @media (max-width: 640px) {
             .hero { padding: 72px 20px 60px; }
             .section { padding: 56px 20px; }
@@ -296,7 +204,6 @@
 </head>
 <body>
 
-    <!-- Hero -->
     <header class="hero">
         <div class="hero-content">
             <h1>Cracked</h1>
@@ -308,7 +215,6 @@
         </div>
     </header>
 
-    <!-- How It Works -->
     <div class="section">
         <span class="section-label">How It Works</span>
         <h2>Focus. Hatch. Collect.</h2>
@@ -337,7 +243,6 @@
         </div>
     </div>
 
-    <!-- Features -->
     <div class="alt-bg">
         <div class="section">
             <span class="section-label">Features</span>
@@ -393,52 +298,11 @@
         </div>
     </div>
 
-    <!-- Privacy -->
-    <div class="alt-bg">
-        <div class="section">
-            <span class="section-label">Privacy &amp; Data</span>
-            <h2>Your Data, Your Control</h2>
-            <p class="lead">Cracked is designed with privacy at its core. We collect minimal data and keep everything secure.</p>
-            <div class="privacy-grid">
-                <div class="privacy-item">
-                    <span class="icon">🔐</span>
-                    <div>
-                        <h4>Sign In with Apple</h4>
-                        <p>Optional sign-in via Apple's privacy-preserving authentication. Your Apple ID credentials are stored securely in the device Keychain.</p>
-                    </div>
-                </div>
-                <div class="privacy-item">
-                    <span class="icon">☁️</span>
-                    <div>
-                        <h4>iCloud Sync Only</h4>
-                        <p>Game progress syncs through your personal iCloud account. We don't operate external servers or collect personal data.</p>
-                    </div>
-                </div>
-                <div class="privacy-item">
-                    <span class="icon">📱</span>
-                    <div>
-                        <h4>On-Device Storage</h4>
-                        <p>All game data is stored locally on your device. Nothing is shared with third parties.</p>
-                    </div>
-                </div>
-                <div class="privacy-item">
-                    <span class="icon">🛡️</span>
-                    <div>
-                        <h4>No Tracking</h4>
-                        <p>No analytics SDKs, no user tracking, no behavioral profiling. Your study habits are yours alone.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA -->
     <div class="cta">
         <h2>Ready to Start Hatching?</h2>
         <p>Download Cracked and make every study session count.</p>
     </div>
 
-    <!-- Contact -->
     <div style="text-align:center; padding: 40px 24px;">
         <a href="mailto:jacobjudetaylor@gmail.com" style="color: #3D7A5F; font-size: 0.95rem; font-weight: 500; text-decoration: none;">Contact</a>
     </div>
